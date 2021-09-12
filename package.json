@@ -1,0 +1,26 @@
+{
+  "name": "shopify-challenge-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-sass scss/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dm-gamboa/shopify-challenge-2022.git"
+  },
+  "author": "donna dominguez gamboa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dm-gamboa/shopify-challenge-2022/issues"
+  },
+  "homepage": "https://github.com/dm-gamboa/shopify-challenge-2022#readme"
+}

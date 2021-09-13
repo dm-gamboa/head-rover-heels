@@ -117,7 +117,7 @@ body {
   object-fit: cover; }
 
 .card__header {
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); }
 
 .card__title {
@@ -132,8 +132,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr; }
 
-.card__summary--item .material-icons {
-  color: #FFB863; }
+.card__summary--item {
+  display: flex;
+  align-items: center; }
+  .card__summary--item .material-icons {
+    margin-right: 0.5rem;
+    color: #FFB863; }
 
 .card__main-content {
   flex: 1;
@@ -195,14 +199,29 @@ section {
   margin-bottom: 1rem; }
 
 .tabs__tab {
-  margin-right: 2rem;
+  position: relative;
+  margin-right: 0.5rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
   cursor: pointer; }
+  @media (min-width: 768px) {
+    .tabs__tab {
+      margin-right: 2rem; } }
   .tabs__tab:hover {
     color: #FFB863; }
   .tabs__tab.active {
-    color: #C86C6D;
-    border-bottom: 3px solid #C86C6D; }
+    color: #C86C6D; }
+  .tabs__tab:after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    height: 5px;
+    width: 0;
+    border-radius: 1rem;
+    transition: width 0.5s ease-in-out; }
+  .tabs__tab.active:after {
+    width: 100%;
+    background-color: #C86C6D; }
 
 .splash {
   position: relative;

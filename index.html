@@ -48,12 +48,12 @@
             <div id="roversContent" class="rovers__content">
                 <div class="rovers__content--filters tabs">
                     <span class="sr-only">Filter list of rovers</span>
-                    <span class="tabs__tab active">All (4)</span>
-                    <span class="tabs__tab">&#x1F60D; Head Rover Heels</span>
-                    <span class="tabs__tab">&#x1F612; Rover It</span>
+                    <span id="filterAll" class="tabs__tab active" data-filter="">All (4)</span>
+                    <span id="filterLiked" class="tabs__tab" data-filter="liked">&#x1F60D; Head Rover Heels</span>
+                    <span id="filterDisliked" class="tabs__tab" data-filter="disliked">&#x1F612; Rover It</span>
                 </div><!--.rovers__content--filters-->
                 <div class="rovers__content--carousel swiper-wrapper">
-                    <div class="card swiper-slide">
+                    <div id="curiosity" class="card swiper-slide">
                         <img class="card__image" src="./assets/rovers/curiosity.jpg" alt="The Curiosity Rover"/>
                         <header class="card__header">
                             <h3 class="card__title">
@@ -85,7 +85,7 @@
                                 Hello world!
                             </div><!--.card__main-content--blurb-->
                             <span class="card__main-content--last-seen">
-                                Last seen yesterday.
+                                <i>Last seen yesterday.</i>
                             </span>
                         </main><!--.card__main-content-->
                         
@@ -104,13 +104,13 @@
                             </button><!--.card__button--close-->
                         </div><!--.card__buttons-->
                     </div><!--.card-->
-                    <div class="card swiper-slide">
-                        <img class="card__image" src="./assets/rovers/curiosity.jpg" alt="The Curiosity Rover"/>
+                    <div id="opportunity" class="card swiper-slide">
+                        <img class="card__image" src="./assets/rovers/opportunity.jpg" alt="The Curiosity Rover"/>
                         <header class="card__header">
                             <h3 class="card__title">
                                 <span class="card__title--name">
                                     <span class="sr-only">Name</span>
-                                    Curiosity
+                                    Opportunity
                                 </span><!--.card__title--name-->,
                                 <span class="card__title--age">
                                     <span class="sr-only">Age</span>
@@ -136,7 +136,7 @@
                                 Hello world!
                             </div><!--.card__main-content--blurb-->
                             <span class="card__main-content--last-seen">
-                                Last seen yesterday.
+                                <i>Last seen yesterday.</i>
                             </span>
                         </main><!--.card__main-content-->
                         
@@ -155,13 +155,13 @@
                             </button><!--.card__button--close-->
                         </div><!--.card__buttons-->
                     </div><!--.card-->
-                    <div class="card swiper-slide">
-                        <img class="card__image" src="./assets/rovers/curiosity.jpg" alt="The Curiosity Rover"/>
+                    <div id="spirit" class="card swiper-slide">
+                        <img class="card__image" src="./assets/rovers/spirit.jpg" alt="The Curiosity Rover"/>
                         <header class="card__header">
                             <h3 class="card__title">
                                 <span class="card__title--name">
                                     <span class="sr-only">Name</span>
-                                    Curiosity
+                                    Spirit
                                 </span><!--.card__title--name-->,
                                 <span class="card__title--age">
                                     <span class="sr-only">Age</span>
@@ -187,7 +187,7 @@
                                 Hello world!
                             </div><!--.card__main-content--blurb-->
                             <span class="card__main-content--last-seen">
-                                Last seen yesterday.
+                                <i>Last seen yesterday.</i>
                             </span>
                         </main><!--.card__main-content-->
                         
@@ -206,13 +206,13 @@
                             </button><!--.card__button--close-->
                         </div><!--.card__buttons-->
                     </div><!--.card-->
-                    <div class="card swiper-slide">
-                        <img class="card__image" src="./assets/rovers/curiosity.jpg" alt="The Curiosity Rover"/>
+                    <div id="perseverance" class="card swiper-slide">
+                        <img class="card__image" src="./assets/rovers/perseverance.jpg" alt="The Curiosity Rover"/>
                         <header class="card__header">
                             <h3 class="card__title">
                                 <span class="card__title--name">
                                     <span class="sr-only">Name</span>
-                                    Curiosity
+                                    Perseverance
                                 </span><!--.card__title--name-->,
                                 <span class="card__title--age">
                                     <span class="sr-only">Age</span>
@@ -238,7 +238,7 @@
                                 Hello world!
                             </div><!--.card__main-content--blurb-->
                             <span class="card__main-content--last-seen">
-                                Last seen yesterday.
+                                <i>Last seen yesterday.</i>
                             </span>
                         </main><!--.card__main-content-->
                         

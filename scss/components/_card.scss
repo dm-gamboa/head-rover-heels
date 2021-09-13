@@ -21,7 +21,7 @@
 }
 
 .card__header {
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -41,7 +41,11 @@
 }
 
 .card__summary--item {
+    display: flex;
+    align-items: center;
+
     .material-icons {
+        margin-right: 0.5rem;
         color: $secondary;
     }
 }

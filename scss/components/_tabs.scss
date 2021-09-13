@@ -4,9 +4,14 @@
 }
 
 .tabs__tab {
-    margin-right: 2rem;
+    position: relative;
+    margin-right: 0.5rem;
     font-size: clamp(1rem, 2vw, 1.5rem);
     cursor: pointer;
+
+    @include tablet {
+        margin-right: 2rem;
+    }
     
     &:hover {
         color: $secondary;
@@ -14,6 +19,21 @@
 
     &.active {
         color: $accent-rose-dark;
-        border-bottom: 3px solid $accent-rose-dark;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        height: 5px;
+        width: 0;
+        border-radius: 1rem;
+        transition: width 0.5s ease-in-out;
+    }
+
+    &.active:after {
+        width: 100%;
+        background-color: $accent-rose-dark;
     }
 }

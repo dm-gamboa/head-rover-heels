@@ -1,6 +1,15 @@
 section {
-    padding: 0 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
     min-height: 100vh;
+
+    @include tablet {
+        padding: 0 1.5rem;
+    }
+
+    @include desktop {
+        padding: 0 2rem;
+    }
 }
 
 .section__header {

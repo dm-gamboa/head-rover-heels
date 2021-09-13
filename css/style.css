@@ -169,12 +169,16 @@ footer {
     text-transform: lowercase;
     text-align: right; }
 
-main {
-  scroll-behavior: smooth; }
-
 section {
-  padding: 0 2rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
   min-height: 100vh; }
+  @media (min-width: 768px) {
+    section {
+      padding: 0 1.5rem; } }
+  @media (min-width: 1200px) {
+    section {
+      padding: 0 2rem; } }
 
 .section__header {
   margin-bottom: 1rem; }
@@ -205,8 +209,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  overflow: hidden; }
+  height: 100vh; }
 
 .splash__content {
   flex: 1;
@@ -246,10 +249,11 @@ section {
 
 .rovers {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden; }
 
 .rovers__content {
-  flex: 1;
   display: flex;
   flex-direction: column; }
 

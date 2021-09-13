@@ -1,3 +1,17 @@
-body {
-    background-color: red;
-}
+@import "variables";
+@import "mixins";
+@import "types";
+
+@import "./animations/bounce";
+@import "./animations/gradient";
+
+@import "./components/accessibility";
+@import "./components/body";
+@import "./components/button";
+@import "./components/card";
+@import "./components/main";
+@import "./components/section";
+@import "./components/tabs";
+
+@import "./sections/splash";
+@import "./sections/rovers";

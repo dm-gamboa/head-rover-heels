@@ -1,0 +1,19 @@
+.tabs {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.tabs__tab {
+    margin-right: 2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    cursor: pointer;
+    
+    &:hover {
+        color: $secondary;
+    }
+
+    &.active {
+        color: $accent-rose-dark;
+        border-bottom: 3px solid $accent-rose-dark;
+    }
+}

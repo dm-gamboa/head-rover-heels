@@ -1,0 +1,14 @@
+.rovers {
+    display: flex;
+    flex-direction: column;
+}
+
+.rovers__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.rovers__content--carousel {
+    flex: 1;
+}

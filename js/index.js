@@ -1,19 +1,22 @@
-const rovers = ['Curiosity', 'Opportunity', 'Spirit', 'Perseverance'];
+import './rovers.js';
+import { rovers } from './rovers.js';
+import { data } from './api/mock.js';
 
-let loading = false;
-let activeFilter = document.querySelector('#filterAll');
+var loading = false;
+var activeFilter = document.querySelector('#filterAll');
 
-const filters = document.querySelectorAll('.tabs__tab').forEach(tab => 
+rovers.all = data;
+new Swiper('#roversContent', {
+    slidesPerView: 'auto'
+});
+
+document.querySelectorAll('.tabs__tab').forEach(tab => 
     tab.addEventListener('click', () => {
         if (tab !== activeFilter) {
             activeFilter.classList.remove('active');
             tab.classList.add('active');
             activeFilter = tab;
+            rovers.filter = tab.getAttribute('data-filter');
         }
     })    
 );
-
-const cardSwiper = new Swiper('#roversContent', {
-    spaceBetween: 30,
-    slidesPerView: 'auto'
-});

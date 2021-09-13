@@ -4,11 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopify Challenge 2022</title>
+    <title>Head Rover Heels</title>
+    <meta
+        name="description"
+        content="Head Rover Heels is a simple web app that uses NASA's public APIs to display Mars Rover photos. It was built as part of Shopify's 2022 Winter Challenge."
+    >
+    <meta name="keywords" content="mars rover, mars, space">
+    <meta name="author" content="Donna Dominguez Gamboa">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Concert+One&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <!-- END Google Fonts -->
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <h1>Hello world!</h1>
+<body class="gradient">
+    <main class="site-main">
+        <section id="splash" class="splash">
+            <div class="splash__content">
+                <div class="splash__intro-text">
+                    3 layers. 2 moons.
+                    <br/>
+                    On Mars, find <b>the one</b> that will make you...
+                </div>
+                <h1 class="site-title">Head Rover Heels</h1>
+            </div> <!--.splash__content-->
+            <img class="splash__image" src="./assets/astronaut-heart.svg" alt="An astronaut waves with a heart above their hand."/>
+            <a href="#rovers" class="splash__scroll-down material-icons bounce">
+                arrow_downward
+                <span class="sr-only">scroll to next section</span>
+            </a>
+        </section><!--#splash-->
+
+        <section id="rovers" class="rovers">
+            <header class="section__header">
+                <h2>What drives you?</h2>
+                <p>Space drifters off to see the world; there’s such a lot of world to see! Experience the Red Planet through the eyes of NASA's rovers.</p>
+            </header>
+            <div class="rovers__content">
+                <div class="rovers__content--carousel">
+                    <div class="card">
+                        <img class="card__image" src="./assets/rovers/curiosity.jpg" alt="The Curiosity Rover"/>
+                        <header class="card__header">
+                            <h3 class="card__title">
+                                <span class="card__title--name">
+                                    <span class="sr-only">Name</span>
+                                    Curiosity
+                                </span><!--.card__title--name-->,
+                                <span class="card__title--age">
+                                    <span class="sr-only">Age</span>
+                                    10
+                                </span><!--.card__title--name-->
+                            </h3><!--.card__title-->
+                            <div class="card__summary">
+                                <span class="card__summary--item">
+                                    <span class="material-icons">donut_large</span>
+                                    <span class="sr-only">Mission Status</span>
+                                    Active
+                                </span><!--.card__summary--item-->
+                                <span class="card__summary--item">
+                                    <span class="material-icons">flight_land</span>
+                                    <span class="sr-only">Landing Date</span>
+                                    July 23, 2021
+                                </span><!--.card__summary--item-->
+                            </div><!--.card__summary-->
+                        </header><!--.card__header-->
+    
+                        <main class="card__main-content">
+                            <div class="card__main-content--blurb">
+                                Hello world!
+                            </div><!--.card__main-content--blurb-->
+                            <span class="card__main-content--last-seen">
+                                Last seen yesterday.
+                            </span>
+                        </main><!--.card__main-content-->
+                        
+                        <div class="card__footer">
+                            <button class="icon-button card__button--dislike">
+                                <span class="material-icons">close</span>
+                                <span class="sr-only">Dislike rover</span>
+                            </button><!--.card__button--close-->
+                            <button class="icon-button card__button--gallery">
+                                <span class="material-icons">collections</span>
+                                <span class="sr-only">View rover photos</span>
+                            </button><!--.card__button--close-->
+                            <button class="icon-button card__button--like">
+                                <span class="material-icons">favorite</span>
+                                <span class="sr-only">Like rover</span>
+                            </button><!--.card__button--close-->
+                        </div><!--.card__buttons-->
+                    </div><!--.card-->
+                </div><!--.rovers__content--carousel-->
+
+            </div> <!--.rovers__content-->
+        </section><!--#rovers-->
+    </main>
+    
     <script src="./js/index.js" type="module"></script>
 </body>
 </html>

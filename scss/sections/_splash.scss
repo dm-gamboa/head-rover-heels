@@ -1,0 +1,51 @@
+.splash {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.splash__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.splash__intro-text {
+    text-align: center;
+    font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.site-title {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(4.5rem, 10vw, 10rem);
+}
+
+.splash__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(-25%, 15%) rotate(35deg);
+    z-index: -1;
+
+    @include tablet{
+        width: 75%;
+    }
+
+    @include desktop {
+        width: 25%;
+    }
+}
+
+.splash__scroll-down {
+    padding-bottom: 1rem;
+    font-size: clamp(1rem, 5vw, 3rem);
+    color: white;
+    text-decoration: none;
+    @include text-shadow;
+}

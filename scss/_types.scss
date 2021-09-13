@@ -5,6 +5,14 @@ h1, h2 {
     @include text-shadow;
 }
 
+a {
+    color: $accent-blue;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
 body {
     font-family: $type-body;
     color: white;

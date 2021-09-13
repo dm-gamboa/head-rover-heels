@@ -4,6 +4,11 @@ h1, h2 {
   color: #FFB863;
   text-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.85); }
 
+a {
+  color: #5A8FA6; }
+  a:hover {
+    color: #FFB863; }
+
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
   color: white; }
@@ -155,6 +160,14 @@ body {
   background-color: #5A8FA6; }
   .card__button--like:hover {
     background-color: #487385; }
+
+footer {
+  float: right;
+  padding: 0 1rem 1rem 0; }
+  footer p {
+    margin: 0;
+    text-transform: lowercase;
+    text-align: right; }
 
 main {
   scroll-behavior: smooth; }

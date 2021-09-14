@@ -6,6 +6,7 @@ import { getAge } from './helpers/getAge.js';
 import { getRelativeDate } from './helpers/getRelativeDate.js';
 import { getTemplate } from './helpers/getTemplate.js';
 import { insertText } from './helpers/insertText.js';
+import { photos } from './photos.js';
 
 const pathToCard = '../common/card.html';
 const cardTemplate = await getTemplate(pathToCard);
@@ -90,6 +91,8 @@ export var rovers = {
             debounce(async () => {
                 const photosSection = document.querySelector('#photos');
                 photosSection.style.display = 'flex';
+                photos.rover = rover.name;
+                photos.values = [];
             }, 250)
         );
     },

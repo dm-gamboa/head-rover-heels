@@ -297,10 +297,6 @@ section {
     .rovers__content--carousel {
       height: 650px; } }
 
-@media (min-width: 768px) {
-  .section__header {
-    text-align: center; } }
-
 .photos {
   display: none;
   flex-direction: column;
@@ -314,6 +310,12 @@ section {
   padding: 1rem;
   height: 100vh;
   z-index: 99; }
+
+.photos .section__header {
+  z-index: 99; }
+  @media (min-width: 768px) {
+    .photos .section__header {
+      text-align: center; } }
 
 .photos__overlay {
   position: fixed;

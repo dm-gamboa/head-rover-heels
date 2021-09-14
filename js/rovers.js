@@ -1,4 +1,5 @@
 import { capitalizeWords } from './helpers/capitalizeWords.js';
+import { debounce } from './helpers/debounce.js';
 import { getRelativeDate } from './helpers/getRelativeDate.js';
 import { getTemplate } from './helpers/getTemplate.js';
 import { insertText } from './helpers/insertText.js';
@@ -48,31 +49,35 @@ export var rovers = {
     },
 
     dislikeRover(btn, rover) {
-        btn.addEventListener('click', () => {
-            let updatedRover = rover;
-            // rover cannot be both liked and disliked ...
-            // ... so change liked to false if user is disliking rover
-            updatedRover.liked = !updatedRover.disliked ? false : updatedRover.liked;
-            updatedRover.disliked = !updatedRover.disliked; 
+        btn.addEventListener('click', 
+            debounce(() => {
+                let updatedRover = rover;
+                // rover cannot be both liked and disliked ...
+                // ... so change liked to false if user is disliking rover
+                updatedRover.liked = !updatedRover.disliked ? false : updatedRover.liked;
+                updatedRover.disliked = !updatedRover.disliked; 
 
-            const index = this._all.indexOf(rover);
-            this._all[index] = updatedRover;
-            this.displayRovers();
-            this.renderFilterNums();
-        });
+                const index = this._all.indexOf(rover);
+                this._all[index] = updatedRover;
+                this.displayRovers();
+                this.renderFilterNums();
+            }, 250)
+        );
     },
 
     likeRover(btn, rover) {
-        btn.addEventListener('click', () => {
-            let updatedRover = rover;
-            updatedRover.disliked = !updatedRover.liked ? false : updatedRover.disliked;
-            updatedRover.liked = !updatedRover.liked; 
+        btn.addEventListener('click',
+            debounce(() => {
+                let updatedRover = rover;
+                updatedRover.disliked = !updatedRover.liked ? false : updatedRover.disliked;
+                updatedRover.liked = !updatedRover.liked; 
 
-            const index = this._all.indexOf(rover);
-            this._all[index] = updatedRover;
-            this.displayRovers();
-            this.renderFilterNums();
-        });
+                const index = this._all.indexOf(rover);
+                this._all[index] = updatedRover;
+                this.displayRovers();
+                this.renderFilterNums();
+            }, 250)
+        );
     },
 
     renderFilterNums() {
@@ -93,10 +98,8 @@ export var rovers = {
         }
         
         for (const count in roverCount) {
-            if (roverCount[count] > 0) {
                 const num = document.querySelector(`[data-filter=${count}] .roverCount`);
-                num.innerHTML = `(${roverCount[count]})`;
-            }
+                num.innerHTML = roverCount[count] > 0 ? `(${roverCount[count]})` : '';
         }
     },
 

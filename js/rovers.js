@@ -88,7 +88,8 @@ export var rovers = {
     viewPhotos(btn, rover) {
         btn.addEventListener('click',
             debounce(async () => {
-                
+                const photosSection = document.querySelector('#photos');
+                photosSection.style.display = 'flex';
             }, 250)
         );
     },

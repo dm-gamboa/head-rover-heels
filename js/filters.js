@@ -1,6 +1,6 @@
 var activeFilter = document.querySelector('#filterAll');
 
-export const setFilters = (rovers) => {
+export const setFiltersEventHandlers = (rovers) => {
     document.querySelectorAll('.tabs__tab').forEach(tab => 
         tab.addEventListener('click', () => {
             if (tab !== activeFilter) {

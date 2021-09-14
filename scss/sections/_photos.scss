@@ -6,7 +6,6 @@
 
 .photos {
     display: none;
-    // display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -17,8 +16,16 @@
     left: 0;
     padding: 1rem;
     height: 100vh;
-    background-color: rgba(darken($primary, 15), 0.8);
     z-index: 99;
+}
+
+.photos__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(darken($primary, 15), 0.8);
 }
 
 .photos__content {

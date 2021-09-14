@@ -1,3 +1,4 @@
+import { saveStatus } from './api/localStorage.js';
 import { capitalizeWords } from './helpers/capitalizeWords.js';
 import { debounce } from './helpers/debounce.js';
 import { getRelativeDate } from './helpers/getRelativeDate.js';
@@ -61,6 +62,7 @@ export var rovers = {
                 this._all[index] = updatedRover;
                 this.displayRovers();
                 this.renderFilterNums();
+                saveStatus(this._all);
             }, 250)
         );
     },
@@ -76,6 +78,7 @@ export var rovers = {
                 this._all[index] = updatedRover;
                 this.displayRovers();
                 this.renderFilterNums();
+                saveStatus(this._all);
             }, 250)
         );
     },

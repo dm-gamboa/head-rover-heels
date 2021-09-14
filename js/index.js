@@ -12,7 +12,7 @@ new Swiper('#roversContent', {
 
 document.querySelectorAll('.tabs__tab').forEach(tab => 
     tab.addEventListener('click', () => {
-        if (tab !== activeFilter) {
+        if (tab !== activeFilter && !loading) {
             activeFilter.classList.remove('active');
             tab.classList.add('active');
             activeFilter = tab;

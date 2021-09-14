@@ -13,6 +13,7 @@ export var rovers = {
     set all(rovers) {
         this._all = rovers;
         this.displayRovers();
+        this.renderFilterNums();
     },
 
     set filter(filter) {
@@ -57,6 +58,7 @@ export var rovers = {
             const index = this._all.indexOf(rover);
             this._all[index] = updatedRover;
             this.displayRovers();
+            this.renderFilterNums();
         });
     },
 
@@ -69,7 +71,33 @@ export var rovers = {
             const index = this._all.indexOf(rover);
             this._all[index] = updatedRover;
             this.displayRovers();
+            this.renderFilterNums();
         });
+    },
+
+    renderFilterNums() {
+        let roverCount = {
+            all: this._all.length,
+            liked: 0,
+            disliked: 0
+        };
+        
+        for (const rover of this._all) {
+            if (rover.liked) {
+                roverCount.liked += 1;
+            }
+
+            if (rover.disliked) {
+                roverCount.disliked += 1;
+            }
+        }
+        
+        for (const count in roverCount) {
+            if (roverCount[count] > 0) {
+                const num = document.querySelector(`[data-filter=${count}] .roverCount`);
+                num.innerHTML = `(${roverCount[count]})`;
+            }
+        }
     },
 
     renderNoDisplay() {

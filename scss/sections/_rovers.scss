@@ -1,7 +1,7 @@
 .rovers {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-direction: flex-end;
     overflow: hidden;
 }
 
@@ -11,5 +11,10 @@
 }
 
 .rovers__content--carousel {
-    flex: 1;
+    padding-bottom: 1rem;
+    height: 500px;
+
+    @include tablet {
+        height: 600px;
+    }
 }

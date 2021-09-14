@@ -48,9 +48,18 @@
             <div id="roversContent" class="rovers__content">
                 <div class="rovers__content--filters tabs">
                     <span class="sr-only">Filter list of rovers</span>
-                    <span id="filterAll" class="tabs__tab active" data-filter="">All</span>
-                    <span id="filterLiked" class="tabs__tab" data-filter="liked">&#x1F60D; Head Rover Heels</span>
-                    <span id="filterDisliked" class="tabs__tab" data-filter="disliked">&#x1F612; Rover It</span>
+                    <span id="filterAll" class="tabs__tab active" data-filter="all">
+                        All
+                        <span class="roverCount"></span>
+                    </span>
+                    <span id="filterLiked" class="tabs__tab" data-filter="liked">
+                        &#x1F60D; Head Rover Heels
+                        <span class="roverCount"></span>
+                    </span>
+                    <span id="filterDisliked" class="tabs__tab" data-filter="disliked">
+                        &#x1F612; Rover It
+                        <span class="roverCount"></span>
+                    </span>
                 </div><!--.rovers__content--filters-->
                 <div id="roverList" class="rovers__content--carousel swiper-wrapper">
                 </div><!--.rovers__content--carousel-->

@@ -1,6 +1,7 @@
 import { saveStatus } from './api/localStorage.js';
 import { capitalizeWords } from './helpers/capitalizeWords.js';
 import { debounce } from './helpers/debounce.js';
+import { getAge } from './helpers/getAge.js';
 import { getRelativeDate } from './helpers/getRelativeDate.js';
 import { getTemplate } from './helpers/getTemplate.js';
 import { insertText } from './helpers/insertText.js';
@@ -121,7 +122,7 @@ export var rovers = {
             const formattedPhotos = new Intl.NumberFormat('en-us').format(rover.totalPhotos);
             
             insertText(roverCard, '.card__title--name', capitalizeWords(rover.name));
-            insertText(roverCard, '.card__title--age', rover.age);
+            insertText(roverCard, '.card__title--age', getAge(rover.launchDate));
             insertText(roverCard, '.card__summary--item.status', rover.status);
             insertText(roverCard, '.card__summary--item.landing', formattedLanding);
             insertText(roverCard, '.card__main-content--blurb', `I've taken ${formattedPhotos} photos so far!`);

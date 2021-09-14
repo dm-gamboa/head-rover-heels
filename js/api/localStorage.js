@@ -3,6 +3,18 @@ const getSavedStatus = () => {
     return savedStatus ? JSON.parse(savedStatus) : {};
 }
 
+const loadStatus = (data) => {
+    const savedStatus = getSavedStatus();
+
+    return data.map((rover) => {
+        const status = savedStatus[rover.name];
+        if (status) {
+            rover[status] = true; 
+        }
+        return rover;
+    });
+}
+
 const saveStatus = (rovers) => {
     let status = {};
 
@@ -19,4 +31,4 @@ const saveStatus = (rovers) => {
     localStorage.setItem('roverStatus', JSON.stringify(status));
 }
 
-export { getSavedStatus, saveStatus };
+export { getSavedStatus, loadStatus, saveStatus };

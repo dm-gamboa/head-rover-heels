@@ -162,7 +162,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   width: 60%; }
 
 .card__button--dislike {
@@ -295,4 +295,4 @@ section {
   height: 500px; }
   @media (min-width: 768px) {
     .rovers__content--carousel {
-      height: 600px; } }
+      height: 650px; } }

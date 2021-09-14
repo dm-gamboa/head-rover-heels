@@ -1,36 +1,20 @@
-import './rovers.js';
+import { setFilters } from './filters.js';
+import { loader } from './loader.js';
 import { rovers } from './rovers.js';
-import { getSavedStatus, saveStatus } from './api/localStorage.js';
-import { data } from './api/mock.js';
-
-var loading = false;
-var activeFilter = document.querySelector('#filterAll');
+import { getAllRovers } from './api/getRoverInfo.js';
+import { loadStatus } from './api/localStorage.js';
 
 new Swiper('#roversContent', {
     slidesPerView: 'auto'
 });
 
-document.querySelectorAll('.tabs__tab').forEach(tab => 
-    tab.addEventListener('click', () => {
-        if (tab !== activeFilter && !loading) {
-            activeFilter.classList.remove('active');
-            tab.classList.add('active');
-            activeFilter = tab;
-            rovers.filter = tab.getAttribute('data-filter');
-        }
-    })    
-);
-
-const initialRender = () => {
-    const savedStatus = getSavedStatus();
+const initialRender = async () => {
     // TO DO: Retrieve data from API
-    rovers.all = data.map((rover) => {
-        const status = savedStatus[rover.name];
-        if (status) {
-            rover[status] = true; 
-        }
-        return rover;
-    });
+    loader.value = true;
+    setFilters(loader.value);
+    const data = await getAllRovers();
+    rovers.all = loadStatus(data);
+    loader.value = false;
 }
 
 initialRender();

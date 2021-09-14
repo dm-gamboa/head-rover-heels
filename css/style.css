@@ -325,20 +325,8 @@ section {
   left: 0;
   background-color: rgba(14, 14, 22, 0.8); }
 
-.photos__content {
-  display: flex;
-  align-items: center; }
-
-.photos__content--pagination {
-  display: none;
-  background-color: #577C70; }
-  @media (min-width: 768px) {
-    .photos__content--pagination {
-      display: block; } }
-
 .photos__content--carousel {
   padding: 0 1rem;
-  justify-content: center;
   width: auto; }
 
 .photo-card {

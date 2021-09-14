@@ -72,11 +72,7 @@
             <header class="section__header">
                 <h2 class="section__header--title">Curiosity's Latest Photos</h2>
             </header>
-            <div class="photos__content">
-                <button class="icon-button photos__content--pagination prev">
-                    <span class="material-icons">chevron_left</span>
-                    <span class="sr-only">Go to previous photo</span>
-                </button><!--photos__content--pagination-next-->
+            <div id="photosContent" class="photos__content">
                 <div class="photos__content--carousel swiper-wrapper">
                     <div class="photo-card swiper-slide">
                         <img src="https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/00201/ids/edr/browse/ncam/NLF_0201_0684792910_271ECM_N0071358NCAM02201_01_195J01_1200.jpg" alt="An image from Curiosity's gallery."/>
@@ -85,11 +81,21 @@
                             <p class="date">September 23, 2021</p>
                         </span><!--.photo-card__text-->
                     </div><!--.photo-card.swiper-slide-->
+                    <div class="photo-card swiper-slide">
+                        <img src="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03234/opgs/edr/rcam/RRB_684604889EDR_F0910390RHAZ00341M_.JPG" alt="An image from Curiosity's gallery."/>
+                        <span class="photo-card__text">
+                            <p class="camera">Front Camera - Left</p>
+                            <p class="date">September 23, 2021</p>
+                        </span><!--.photo-card__text-->
+                    </div><!--.photo-card.swiper-slide-->
+                    <div class="photo-card swiper-slide">
+                        <img src="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03234/opgs/edr/fcam/FLB_684604845EDR_F0910390FHAZ00341M_.JPG" alt="An image from Curiosity's gallery."/>
+                        <span class="photo-card__text">
+                            <p class="camera">Front Camera - Left</p>
+                            <p class="date">September 23, 2021</p>
+                        </span><!--.photo-card__text-->
+                    </div><!--.photo-card.swiper-slide-->
                 </div><!--.photos__content--carousel-->
-                <button class="icon-button photos__content--pagination next">
-                    <span class="material-icons">chevron_right</span>
-                    <span class="sr-only">Go to next photo</span>
-                </button><!--photos__content--pagination-next-->
             </div><!--.photos__content-->
         </section><!--.photos-->
     </main>

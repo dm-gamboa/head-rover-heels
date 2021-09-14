@@ -15,7 +15,7 @@
 
 .photos .section__header {
     z-index: 99;
-    
+
     @include tablet {
         text-align: center;
     }
@@ -30,23 +30,8 @@
     background-color: rgba(darken($primary, 15), 0.8);
 }
 
-.photos__content {
-    display: flex;
-    align-items: center;
-}
-
-.photos__content--pagination {
-    display: none;
-    background-color: $accent-green;
-
-    @include tablet {
-        display: block;
-    }
-}
-
 .photos__content--carousel {
     padding: 0 1rem;
-    justify-content: center;
     width: auto;
 }
 

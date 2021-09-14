@@ -11,7 +11,7 @@ new Swiper('#roversContent', {
 const initialRender = async () => {
     // TO DO: Retrieve data from API
     loader.value = true;
-    setFilters(loader.value);
+    setFilters(rovers);
     const data = await getAllRovers();
     rovers.all = loadStatus(data);
     loader.value = false;

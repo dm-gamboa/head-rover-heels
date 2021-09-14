@@ -89,10 +89,11 @@ export var rovers = {
     viewPhotos(btn, rover) {
         btn.addEventListener('click',
             debounce(async () => {
+                const data = await getRoverPhotos(rover.name);
+                photos.rover = rover.name;
+                photos.values = data;
                 const photosSection = document.querySelector('#photos');
                 photosSection.style.display = 'flex';
-                photos.rover = rover.name;
-                photos.values = [];
             }, 250)
         );
     },

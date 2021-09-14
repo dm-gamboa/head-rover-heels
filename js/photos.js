@@ -1,4 +1,9 @@
-import { insertText } from "./helpers/insertText.js";
+import { capitalizeWords } from './helpers/capitalizeWords.js';
+import { insertText } from './helpers/insertText.js';
+import { getTemplate } from './helpers/getTemplate.js';
+
+const pathToTemplate = '../common/photo-card.html';
+const photoTemplate = await getTemplate(pathToTemplate);
 
 var photos = {
     _visible: true,
@@ -12,7 +17,7 @@ var photos = {
     set values(values) {
         this._values = values;
         this.updatePhotosTitle();
-        this.renderPhotos();
+        this.renderPhotos(values);
     },
 
     get rover() {
@@ -29,7 +34,25 @@ var photos = {
         insertText(document, '#photos .section__header h2', `${this._rover}'s Latest Photos`);
     },
 
-    renderPhotos() { },
+    renderPhotos(photos) {
+        const photosList = document.querySelector('#photosList');
+        photosList.innerHTML = '';
+
+        console.log(photos)
+
+        photos.forEach(photo => {
+            const photoSlide = document.importNode(photoTemplate.content, true);
+            const formattedDate = new Intl.DateTimeFormat('en-us', {dateStyle: 'medium'}).format(photo.timestamp);
+            
+            insertText(photoSlide, '.photo-card__text .camera', photo.camera);
+            insertText(photoSlide, '.photo-card__text .date', formattedDate);
+
+            const photoImage = photoSlide.querySelector('img');
+            photoImage.src = photo.src;
+            photoImage.alt = `Nasa's ${capitalizeWords(this._rover)} rover on Mars`;
+            photosList.appendChild(photoSlide);
+        });
+    },
 };
 
 const setPhotosEventHandler = () => {

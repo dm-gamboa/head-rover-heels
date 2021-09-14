@@ -1,3 +1,4 @@
+import { getRoverPhotos } from './api/getRoverPhotos.js';
 import { saveStatus } from './api/localStorage.js';
 import { capitalizeWords } from './helpers/capitalizeWords.js';
 import { debounce } from './helpers/debounce.js';
@@ -84,6 +85,14 @@ export var rovers = {
         );
     },
 
+    viewPhotos(btn, rover) {
+        btn.addEventListener('click',
+            debounce(async () => {
+                
+            }, 250)
+        );
+    },
+
     renderFilterNums() {
         let roverCount = {
             all: this._all.length,
@@ -134,6 +143,9 @@ export var rovers = {
             
             const dislikeBtn = roverCard.querySelector('.card__button--dislike');
             this.dislikeRover(dislikeBtn, rover);
+
+            const photosBtn = roverCard.querySelector('.card__button--photos');
+            this.viewPhotos(photosBtn, rover);
 
             const likeBtn = roverCard.querySelector('.card__button--like');
             this.likeRover(likeBtn, rover);

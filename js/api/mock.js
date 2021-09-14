@@ -1,4 +1,4 @@
-export const data = [
+export const roverData = [
     {
         name: 'curiosity',
         age: 10,
@@ -42,4 +42,12 @@ export const data = [
         liked: false,
         disliked: false,
     },
+];
+
+export const galleryData = [
+    {
+        src: 'https://mars.nasa.gov/ma…02201_01_195J01_1200.jpg',
+        timestamp: Date.now(),
+        camera: 'Navigation Camera - Left'
+    }
 ];

@@ -170,9 +170,9 @@ body {
   .card__button--dislike:hover {
     background-color: #ba4748; }
 
-.card__button--gallery {
+.card__button--photos {
   background-color: #577C70; }
-  .card__button--gallery:hover {
+  .card__button--photos:hover {
     background-color: #425e55; }
 
 .card__button--like {

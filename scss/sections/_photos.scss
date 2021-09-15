@@ -38,7 +38,9 @@
 .photo-card {
     position: relative;
     max-width: 600px;
+    min-height: 400px;
     max-height: 500px;
+    margin-right: 30px;
 
     @include tablet {
         padding: 0 3rem;

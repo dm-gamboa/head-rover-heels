@@ -1,0 +1,36 @@
+.credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header {
+        font-size: clamp(2rem, 2vw, 3rem);
+        margin-top: 5rem;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    main {
+        flex: 1;
+    }
+
+    .go-back {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        
+        &:hover {
+            color: $secondary;
+        }
+
+        .material-icons, .text {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        margin-top: 1rem;
+    }
+}

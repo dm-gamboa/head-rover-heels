@@ -71,7 +71,8 @@ html {
 
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  height: 100vh; }
 
 .icon-button {
   position: relative;
@@ -236,6 +237,29 @@ section {
   .tabs__tab.active:after {
     width: 100%;
     background-color: #C86C6D; }
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .credits header {
+    font-size: clamp(2rem, 2vw, 3rem);
+    margin-top: 5rem; }
+    .credits header p {
+      font-size: 1rem; }
+  .credits main {
+    flex: 1; }
+  .credits .go-back {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem; }
+    .credits .go-back:hover {
+      color: #FFB863; }
+    .credits .go-back .material-icons, .credits .go-back .text {
+      margin-right: 0.5rem;
+      font-size: 1.5rem; }
 
 .splash {
   position: relative;

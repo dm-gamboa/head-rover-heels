@@ -37,9 +37,6 @@ var photos = {
     renderPhotos(photos) {
         const photosList = document.querySelector('#photosList');
         photosList.innerHTML = '';
-
-        console.log(photos)
-
         photos.forEach(photo => {
             const photoSlide = document.importNode(photoTemplate.content, true);
             const formattedDate = new Intl.DateTimeFormat('en-us', {dateStyle: 'medium'}).format(photo.timestamp);

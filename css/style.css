@@ -356,7 +356,9 @@ section {
 .photo-card {
   position: relative;
   max-width: 600px;
-  max-height: 500px; }
+  min-height: 400px;
+  max-height: 500px;
+  margin-right: 30px; }
   @media (min-width: 768px) {
     .photo-card {
       padding: 0 3rem; } }

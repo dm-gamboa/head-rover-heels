@@ -145,7 +145,7 @@ body {
   align-items: center; }
   .card__summary--item .material-icons {
     margin-right: 0.5rem;
-    color: #FFB863; }
+    color: #2D2C44; }
 
 .card__main-content {
   flex: 1;
@@ -357,8 +357,9 @@ section {
   position: relative;
   max-width: 600px;
   min-height: 400px;
-  max-height: 500px;
-  margin-right: 30px; }
+  max-height: 500px; }
+  .photo-card:not(:last-child) {
+    margin-right: 30px; }
   @media (min-width: 768px) {
     .photo-card {
       padding: 0 3rem; } }

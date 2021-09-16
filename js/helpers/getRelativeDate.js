@@ -1,23 +1,26 @@
 export const getRelativeDate = (date) => {
     let difference = (Date.now() - date) / (1000 * 3600 * 24 * 365); // in years
+    let roundedDiff = Math.floor(difference);
 
-    if (difference > 1) {
-        return `${Math.floor(difference)} years ago`;
+    if (roundedDiff > 1) {
+        return `${roundedDiff} years ago`;
     }
 
     difference *= 12; // in months
+    roundedDiff = Math.floor(difference);
 
-    if (difference > 1) {
-        return `${Math.floor(difference)} months ago`;
+    if (roundedDiff > 1) {
+        return `${roundedDiff} months ago`;
     }
 
-    difference *= 28;
+    difference *= 28; // in days
+    roundedDiff = Math.floor(difference);
     
-    if (difference > 1) {
-        return `${Math.floor(difference)} days ago`;
+    if (roundedDiff > 1) {
+        return `${roundedDiff} days ago`;
     }
 
-    if (difference === 1) {
+    if (roundedDiff === 1) {
         return 'yesterday';
     }
 

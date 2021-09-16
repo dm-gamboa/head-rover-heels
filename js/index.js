@@ -7,7 +7,6 @@ import { getAllRovers } from './api/getRoverInfo.js';
 import { loadStatus } from './api/localStorage.js';
 
 const initialRender = async () => {
-    // TO DO: Retrieve data from API
     loader.value = true;
     const data = await getAllRovers();
     rovers.all = loadStatus(data);

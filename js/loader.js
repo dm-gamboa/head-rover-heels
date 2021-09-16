@@ -1,11 +1,17 @@
 export var loader = {
-    _value: false,
+    _rovers: false,
 
-    get value() {
-        return this._value;
+    set roversLoading(value) {
+        this._rovers = value;
+        this.displayLoader();
     },
 
-    set value(value) {
-        this._value = value;
+    get roversLoading() {
+        return this._rovers;
+    },
+
+    displayRoversLoader() {
+        const roversLoader = document.querySelector('#roversLoader');
+        roversLoader.classList.toggle('loading');
     }
 }

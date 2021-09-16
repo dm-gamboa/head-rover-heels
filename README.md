@@ -4,8 +4,6 @@ Head Rover Heels is a web app developed as part of Shopify's 2022 Winter Interns
 
 **Link to the App [here](https://headroverheels.web.app/).**
 
-![App Preview](https://i.imgur.com/JvrnlXu.png)
-
 ## Features
 
 The app allows users to:

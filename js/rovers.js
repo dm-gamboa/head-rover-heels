@@ -143,7 +143,7 @@ export var rovers = {
             insertText(roverCard, '.card__main-content--last-seen', `Last seen ${getRelativeDate(rover.lastSeen)}`);
         
             const roverImage = roverCard.querySelector('.card__image img');
-            roverImage.src = `../assets/rovers/${rover.name}.jpg`;
+            roverImage.src = `../assets/rovers/${rover.name}.webp`;
             roverImage.alt = `Nasa's ${capitalizeWords(rover.name)} rover on Mars`;
             
             const dislikeBtn = roverCard.querySelector('.card__button--dislike');
